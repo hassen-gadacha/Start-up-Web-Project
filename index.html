@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/master.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap">
+
+    </head>
+    <body>
+
+        <!-- start settings box -->
+        <div class="settings-box">
+            <div class="toggle-settings">
+                <i class="fa fa-gear"></i>
+            </div>
+            <div class="settings-container">
+                <div class="option-box">
+                    <h4>Colors</h4>
+                    <ul class="colors-list">
+                        <li class="active" data-color="#FF9800"></li>
+                        <li data-color="#B71C1C"></li>
+                        <li data-color="#1A237E"></li>
+                        <li data-color="#009688"></li>
+                        <li data-color="#F4DD81"></li>
+                    </ul>
+                </div>
+                <div class="option-box">
+                    <h4>Random Backgrounds</h4>
+                    <div class="random-backgrounds">
+                        <span class="yes active" data-background="yes">YES</span>
+                        <span class="no" data-background="no">NO</span>
+                    </div>
+                </div>
+                <div class="option-box">
+                    <h4>Show Bullets</h4>
+                    <div class="bullets-option">
+                        <span class="yes active" data-display="show">YES</span>
+                        <span class="no" data-display="hide">NO</span>
+                    </div>
+                </div>
+                <button class="reset-options">Reset-Options</button>
+            </div>
+        </div>
+
+
+
+        <!-- end settings box -->
+        <!-- start nav bullets -->
+        <div class="nav-bullets">
+            <div class="bullet" data-section=".about-us">
+                <div class="tooltip">About Us</div>
+            </div>
+            <div class="bullet" data-section=".skills">
+                <div class="tooltip">Our Progress</div>
+            </div>
+            <div class="bullet" data-section=".gallery">
+                <div class="tooltip">Our Gallery</div>
+            </div>
+            <div class="bullet" data-section=".timeline">
+                <div class="tooltip">Our Timeline</div>
+            </div>
+            <div class="bullet" data-section=".features">
+                <div class="tooltip">Our Features</div>
+            </div>
+            <div class="bullet" data-section=".testimonials">
+                <div class="tooltip">Testimonials</div>
+            </div>
+            <div class="bullet" data-section=".project">
+                <div class="tooltip">Our Projects</div>
+            </div>
+            <div class="bullet" data-section=".team">
+                <div class="tooltip">Our Team</div>
+            </div>
+            <div class="bullet" data-section=".contact">
+                <div class="tooltip">Contact Us</div>
+            </div>
+        </div>
+        <!-- end nav bullets -->
+
+
+        <!-- start landing page -->
+        <div class="landing-page">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="header-area">
+                    <div class="logo"><img src="images/logo2.png" alt="illustration"></div>
+                    <div class="links-container">
+                        <ul class="links ">
+                            <li><a href="#" data-section=".about-us" >About</a></li>
+                            <li><a href="#" data-section=".skills">Progress</a></li>
+                            <li><a href="#" data-section=".gallery">Gallery</a></li>
+                            <li><a href="#" data-section=".timeline">Timeline</a></li>
+                            <li><a href="#" data-section=".features">Features</a></li>
+                            <li><a href="#" data-section=".testimonials">Testimonials</a></li>
+                            <li><a href="#" data-section=".project">Projects</a></li>
+                            <li><a href="#" data-section=".team">Team</a></li>
+                            <li><a href="#" data-section=".contact" >Contact Us</a></li>
+                            <!-- 8/4/23 -->
+                            <li><button class="login">Login</button></li>
+                        </ul>
+                        <button class="toggle-menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- 8/4/23 -->
+            <div class="wrapper">
+                <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+                <div class="form-box login">
+                    <h2>Login</h2>
+                    <form action="php/login.php" method="POST">
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                                <input type="email" name="email" required>
+                                <label >Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                                <input type="password" name="password" required>
+                                <label >Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label ><input type="checkbox">Remember me</label>
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn">Login</button>
+                        <div class="login-register">
+                            <p>Dont have an account? <a href="#" class="register-link"> Register</a></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-box register">
+                    <h2>Registration</h2>
+                    <form action="php/signup.php" method="POST">
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="person"></ion-icon></span>
+                                <input type="text" id="name" name="name" required>
+                                <label for="name" >Username</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                                <input type="email" id="email" name="email" required>
+                                <label for="email">Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                                <input type="password" id="password" name="password" required>
+                                <label for="password">Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label ><input type="checkbox">I agree to the terms & conditions</label>
+                        </div>
+                        <button type="submit" class="btn">Register</button>
+                        <div class="login-register">
+                            <p>Already have an account? <a href="#" class="login-link"> Login</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="introduction-text">
+                <h1>We Are <span>AI</span> Nexus</h1>
+                <p>Unlock the full potential of AI, with Us.</p>
+            </div>
+            
+        </div>
+
+        <!-- end landing page -->
+        <!-- start about us -->
+        <div class="main-about-us" id="about_us">
+            <div class="container">
+                <h2 class="main-title">About Us</h2>
+                <div class="about-us">
+                    <div class="info-box">
+                        <p>AI nexus  uses AI to transform industries. Our expert team specializes in creating customized solutions for clients using AI, machine learning, and data science. We're dedicated to staying at the forefront of AI research and development to drive growth and increase efficiency. Let us help you with our cutting-edge AI solutions.</p>
+                    </div>
+                    <div class="image-box">
+                        <!-- about us with image instead of video <img src="images/About-Us.jpg" alt="illustration"> -->
+                        <video  controls>
+                            <source src="video/movie.mp4" type="video/mp4">
+                            <source src="video/movie.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                        </video>
+                        <audio controls>
+                            <source src="video\What_is_AI.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- start about us -->
+
+        <!-- start our skills -->
+        <div class="skills">
+            <div class="container">
+                <h2 class="main-title">Our Projects In Progress</h2>
+                <div class="skill-box">
+                    <div class="skill-name">ChatGPT</div>
+                    <div class="skill-progress">
+                        <span data-progress="80%"></span>
+                    </div>
+
+                </div>
+                <div class="skill-box">
+                    <div class="skill-name">Youtube</div>
+                    <div class="skill-progress">
+                        <span data-progress="70%"></span>
+                    </div>
+
+                </div>
+                <div class="skill-box">
+                    <div class="skill-name">Google Bard</div>
+                    <div class="skill-progress">
+                        <span data-progress="90%"></span>
+                    </div>
+
+                </div>
+                <div class="skill-box">
+                    <div class="skill-name">Web MD</div>
+                    <div class="skill-progress">
+                        <span data-progress="85%"></span>
+                    </div>
+
+                </div>
+                <div class="skill-box">
+                    <div class="skill-name">Jupiter</div>
+                    <div class="skill-progress">
+                        <span data-progress="75%"></span>
+                    </div>
+
+                </div>
+                <div class="skill-box">
+                    <div class="skill-name">Black Box</div>
+                    <div class="skill-progress">
+                        <span data-progress="95%"></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- end our skills -->
+        <!-- start our gallery -->
+        <div class="gallery">
+            <div class="container">
+                <h2 class="main-title">Our Gallery</h2>
+                <div class="images-box">
+                    <img src="images/01.jpg" alt="picture 01">
+                    <img src="images/02.jpg" alt="picture 02">
+                    <img src="images/03.jpg" alt="picture 03">
+                    <img src="images/04.jpg" alt="picture 04">
+                    <img src="images/05.jpg" alt="picture 05">
+                    <img src="images/06.jpg" alt="picture 06">
+                    <img src="images/07.jpg" alt="picture 07">
+                    <img src="images/08.jpg" alt="picture 08">
+                    <img src="images/09.jpg" alt="picture 09">
+                    <img src="images/10.jpg" alt="picture 10">
+                </div>
+            </div>
+        </div>
+        <!-- end our gallery -->
+        <!-- start timeline -->
+        <div class="timeline">
+            <div class="container">
+                <h2 class="main-title">Our Timeline</h2>
+                <div class="timeline-content">
+                    <div class="year">2023</div>
+                    <div class="left">
+                        <div class="content">
+                            <h3>Market Expansion and Revenue Growth.</h3>
+                            <p>Expanded the company's geographic reach.
+                                Developed new revenue streams through partnerships and alliances.
+                                Continued to iterate and improve the product based on user feedback.
+                                Optimized sales and marketing efforts to drive revenue growth.
+                                Explored new verticals and markets to expand the customer base.</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="right">
+                        <div class="content">
+                            <h3>Scaling and Growth</h3>
+                            <p>Secured additional funding to support growth.
+                                Expanded the product offering and added new features.
+                                Hired additional staff to support sales and marketing efforts.
+                                Established a sales and distribution network to reach new customers.
+                                Developed strategic partnerships to accelerate growth.</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="year">2021</div>
+                    <div class="left">
+                        <div class="content">
+                            <h3>Product Development and MVP Release</h3>
+                            <p>Developed a Minimum Viable Product (MVP) with AI functionality.
+                                Conducted user testing and gathered feedback.
+                                Made a fitness  a mobile app that uses the device's camera to track the user's movements during a workout.
+                                The app would analyze the user's form and provide real-time feedback and personalized coaching based on the user's fitness level and goals.
+                                Iterated and improved the product based on user feedback.
+                                Built partnerships and alliances to increase product exposure.
+                                Started building the company's brand and marketing strategy.</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="clearfix"></div>
+                    <div class="year">2019</div>
+                    <div class="left">
+                        <div class="content">
+                            <h3>Seed Stage</h3>
+                            <p>Developed a business plan and pitched to investors.
+                                Conducted market research and identified potential customers.
+                                Developed an AI prototype and tested it with early adopters.
+                                Secured seed funding and started building the product.</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="right">
+                        <div class="content">
+                            <h3>founding</h3>
+                            <p>Founded the company and recruited a core team.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end timeline -->
+        <!-- start features -->
+        <div class="features">
+            <h2 class="main-title">Our Features</h2>
+            <div class="container">
+                <div class="feat-box">
+                    <img src="images\icon01.png" alt="">
+                    <h4>AI Consulting</h4>
+                    <p>We help you identify and implement the right AI solutions.</p>
+                </div>
+                <div class="feat-box">
+                    <img src="images\icon02.png" alt="">
+                    <h4>Machine Learning</h4>
+                    <p>We build custom machine learning models to improve your business.</p>
+                </div>
+                <div class="feat-box">
+                    <img src="images\icon03.png" alt="">
+                    <h4>Natural Language Processing</h4>
+                    <p>We use NLP to help you analyze and understand unstructured data.</p>
+                </div>
+                <div class="feat-box">
+                    <img src="images\icon04.png" alt="">
+                    <h4>Data Science</h4>
+                    <p>We help you collect, clean, and analyze your data.</p>
+                </div>
+                <div class="feat-box">
+                    <img src="images\icon05.png" alt="">
+                    <h4>Computer Vision</h4>
+                    <p>Recognizing and classifying objects, people, and activities visually.</p>
+                </div>
+                <div class="feat-box">
+                    <img src="images\icon06.png" alt="">
+                    <h4>Recommendation Systems</h4>
+                    <p>Personalizing product, service, or content recommendations for users.</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- end features -->
+        <!-- start testimonials -->
+        <div class="testimonials">
+            <div class="container">
+                <h2 class="main-title">Testimonials</h2>
+                <div class="ts-box">
+                    <p>"We were impressed by AI Nexus's AI solution, which streamlined our operations and saved time and resources. Their expertise and professionalism exceeded our expectations."</p>
+                    <div class="person-info">
+                        <img src="images/ceoinstadeeppic1.jpg" alt="person-01">
+                        <h4>Karim Beguir</h4>
+                        <p>CEO at Instadeep</p>
+                    </div>
+                </div>
+                <div class="ts-box">
+                    <p>"Thanks to AI Nexus's AI solutions, we achieved a level of accuracy and efficiency we never thought possible. They identified areas of improvement and created a tailored solution that met our unique needs."</p>
+                    <div class="person-info">
+                        <img src="images/youtubeceopic1.jpeg" alt="person-02">
+                        <h4>person 2</h4>
+                        <p>CEO at Youtube</p>
+                    </div>
+                </div>
+                <div class="ts-box">
+                    <p>"Collaborating with AI Nexus on ChatGPT was a privilege. Their expertise in AI, machine learning, and data science was crucial to its success, and their ability to work together made the project run smoothly."</p>
+                    <div class="person-info">
+                        <img src="images/openaiceopic1.jpeg" alt="person-03">
+                        <h4>Sam Altman</h4>
+                        <p>CEO at OpenAi</p>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!-- end testimonials -->
+        <!-- start project -->
+        <div class="project">
+            <h2 class="main-title">projects</h2>
+            <div class="container">
+                <div class="left">
+                    <h3>Our Partners</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Google</li>
+                        <li>Instadeep</li>
+                        <li>Twitter</li>
+                    </ul>
+
+                </div>
+
+                <div class="right">
+                    <h3>Our Projects</h3>
+                    <ol type="1">
+                        <li>ChatGPT</li>
+                        <li>Youtube</li>
+                        <li>Microsoft Teams</li>
+                        <li>Web MD</li>
+
+                    </ol>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- end project -->
+        <!-- Start Team -->
+        <div class="team" id="team">
+        <h2 class="main-title">Team Members</h2>
+        <div class="container">
+          <div class="box">
+            <div class="data">
+              <img src="images\ahmedpic2.jpg" alt="ahmed picture" />
+              <div class="social">
+                <a href="https://www.facebook.com/ahmedaziz.rezgui/" target="_blank">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="https://github.com/Rezgui-ahmed-aziz" target="_blank">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a href="https://www.linkedin.com/in/ahmed-aziz-rezgui-9347a8271/" target="_blank">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <a href=mailto:"ahmedaziz.rezgui@ensi-uma.tn">
+                    <ion-icon name="mail"></ion-icon>
+                </a>
+              </div>
+            </div>
+            <div class="info">
+              <h3>Ahmed Aziz Rezgui</h3>
+              <p>1st year engineering student</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="data">
+              <img src="images\hassenpic" alt="hassen picture" />
+              <div class="social">
+                <a href="https://www.facebook.com/hassen.gadacha.3" target="_blank">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="https://github.com/hassen-gadacha" target="_blank">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a href="https://www.linkedin.com/in/hassen-gadacha-347948202/" target="_blank">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <a href=mailto:"hassen.gadacha@ensi-uma.tn">
+                    <ion-icon name="mail"></ion-icon>
+                </a>
+              </div>
+            </div>
+            <div class="info">
+              <h3>Hassen Gadacha</h3>
+              <p>1st year engineering student</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="data">
+              <img src="images/dhiapic1.JPG" alt="" />
+              <div class="social">
+                <a href="https://www.facebook.com/dhia.rahali.79" target="_blank">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="https://www.linkedin.com/in/rahali-dhia-eddine-1a92a0271/" target="_blank">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a href="https://github.com/RahaliDhia" target="_blank">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <a href=mailto:"dhiaeddine.rahali@ensi-uma.tn">
+                    <ion-icon name="mail"></ion-icon>
+                </a>
+              </div>
+            </div>
+            <div class="info">
+              <h3>dhia Rahali</h3>
+              <p>1st year engineering student</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="spikes"></div>
+      <!-- End Team -->
+        <!-- start contact us -->
+        <div class="contact">
+            <div class="overlay"></div>
+            <div class="container">
+                <h2 class="main-title">Contact Us</h2>
+                <form action="php/contact.php" method="POST">
+                    <div class="left">
+                        <input type="text" placeholder="Your name" name="name" required>
+                        <input type="tel" placeholder="Your phone number" name="phone" required>
+                        <input type="email" placeholder="Your email address" name="email"  required>
+                        <input type="text" placeholder="The subject" name="subject"  required>
+                    </div>
+                    <div class="right">
+                        <textarea name="message" placeholder="Your message"></textarea>
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- end contact us -->
+        <!-- start footer -->
+        <div class="footer">
+            <div class="container">
+              <div class="box">
+                <h3>AI Nexus</h3>
+                <ul class="social">
+                  <li>
+                    <a href="#" class="facebook">
+                      <i class="fa fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="twitter">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="linkedin">
+                      <i class="fa fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                </ul>
+                <p class="text">
+                    AI nexus uses AI to transform industries. Our expert team specializes in creating customized solutions for clients using AI, machine learning, and data science.
+                </p>
+              </div>
+              <div class="box">
+                <ul class="links">
+                  <li><a href="#team">Ahmed Aziz Rezgui</a></li>
+                  <li><a href="#team">Hassen Gadacha</a></li>
+                  <li><a href="#team">Dhia Rahali</a></li>
+                </ul>
+                <br>
+                <div class="box footer-gallery">
+                  <img src="images/ahmedpic2.jpg" alt="" />
+                  <img src="images/hassenpic" alt="" />
+                  <img src="images/dhiapic1.JPG" alt="" />
+                </div>
+              </div>
+              <div class="box">
+                <div class="line">
+                  <i class="fa fa-map-marker fa-fw"></i>
+                  <div class="info">Lac 2, Tunis ,Tunisie</div>
+                </div>
+                <div class="line">
+                  <i class="fa fa-clock fa-fw"></i>
+                  <div class="info">Full time</div>
+                </div>
+                <div class="line">
+                  <i class="fa fa-phone-volume fa-fw"></i>
+                  <div class="info">
+                    <span>+21656010925</span>
+                    <span>+21612345678</span>
+                    <span>+21612345678</span>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <p class="copyright">&copy; 2023 Nexus AI. <span>
+              All rights reserved</span></p>
+          </div>
+            <div class="right_text">
+                <a href="vip-registration.html" class="rainbow">Become a VIP Member</a>
+            </div>
+        </footer>
+        <!-- end footer -->
+        
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="js/master.js"></script>
+    </body>
+</html>
